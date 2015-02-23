@@ -1,0 +1,7 @@
+# -*- mode: snippet -*-
+# name: Cepl fn_
+# key: λ
+# binding: direct-keybinding
+# type: snippet
+# --
+λ($0)

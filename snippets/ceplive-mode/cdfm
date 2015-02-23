@@ -1,0 +1,8 @@
+# -*- mode: snippet -*-
+# name: Cepl defsmacro
+# key: cdfm
+# binding: direct-keybinding
+# type: snippet
+# --
+(defsmacro ${1:name} ($2:x)
+  $0)

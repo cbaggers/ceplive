@@ -1,0 +1,9 @@
+# -*- mode: snippet -*-
+# name: Cepl defglstruct
+# key: cdfs
+# binding: direct-keybinding
+# type: snippet
+# --
+(defglstruct ${1:gs} ()
+(${2:position} ${3::vec4} :accessor ${4:pos})
+$0)

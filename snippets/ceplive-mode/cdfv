@@ -1,0 +1,8 @@
+# -*- mode: snippet -*-
+# name: Cepl defvshader
+# key: cdfv
+# binding: direct-keybinding
+# type: snippet
+# --
+(defvshader ${1:vert} ((${2:x} ${3::vec4})${4: &uniform (i :int)})
+$0)

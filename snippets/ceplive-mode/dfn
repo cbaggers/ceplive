@@ -1,0 +1,8 @@
+# -*- mode: snippet -*-
+# name: ceplive defun
+# key: dfn
+# binding: direct-keybinding
+# type: snippet
+# --
+(defun ${1:name} (${2:x})
+$0)

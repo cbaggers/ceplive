@@ -1,0 +1,7 @@
+# -*- mode: snippet -*-
+# name: gl clear
+# key: clear
+# binding: direct-keybinding
+# type: snippet
+# --
+(gl:clear ${0::color-buffer-bit :depth-buffer-bit})

@@ -1,0 +1,9 @@
+# -*- mode: snippet -*-
+# name: cepl observe system
+# key: obss
+# binding: direct-keybinding
+# type: snippet
+# --
+(observe (|sys|)
+  $1)
+$0

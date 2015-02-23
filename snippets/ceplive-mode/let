@@ -1,0 +1,8 @@
+# -*- mode: snippet -*-
+# name: ceplive let
+# key: let
+# binding: direct-keybinding
+# type: snippet
+# --
+(let ((${1:name} ${2:val}))$3)
+$0)

@@ -1,0 +1,8 @@
+# -*- mode: snippet -*-
+# name: ceplive defclass
+# key: dfc
+# binding: direct-keybinding
+# type: snippet
+# --
+(defclass ${1:name} (${2})
+$0)

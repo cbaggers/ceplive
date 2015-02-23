@@ -1,0 +1,7 @@
+# -*- mode: snippet -*-
+# name: ceplive def
+# key: df
+# binding: direct-keybinding
+# type: snippet
+# --
+(def ${1:name} (${0:val}))

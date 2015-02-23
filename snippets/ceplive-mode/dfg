@@ -1,0 +1,8 @@
+# -*- mode: snippet -*-
+# name: ceplive defmethod
+# key: dfg
+# binding: direct-keybinding
+# type: snippet
+# --
+(defmethod ${1:name} ((${2:x} ${3:t}))
+$0)

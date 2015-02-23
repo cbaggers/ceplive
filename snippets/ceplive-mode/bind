@@ -1,0 +1,8 @@
+# -*- mode: snippet -*-
+# name: ceplive bind
+# key: bind
+# binding: direct-keybinding
+# type: snippet
+# --
+(bind (${1:x}) (${2})
+$0)
