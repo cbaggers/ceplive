@@ -1,0 +1,6 @@
+*~
+*.fasl
+*.FASL
+*.~lock*
+\#*\#
+*.dx64fsl
