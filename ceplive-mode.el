@@ -19,37 +19,6 @@
   (yas-activate-extra-mode 'ceplive-mode)
   (ensure-ceplive-loaded))
 
-(defun slime-eval-into-file ()
-  "Evaluate the current toplevel form.
-store the result in a new global and insert the
-var into the code"
-  (interactive)
-  (cl-destructuring-bind (region-start region-end)
-      (slime-region-for-defun-at-point)
-    (slime-flash-region region-start region-end)
-    (let* ((form (buffer-substring-no-properties region-start region-end))
-           (full-form
-            (concat "(let ((-res- (progn" form ")))
-                       (list (format nil \"~s\" -res-)
-                             (swank::save-presented-object -res-)
-                             (labels ((lit (x) (or (numberp x)
-                                                  (symbolp x)
-                                                  (stringp x)
-                                                  (and (listp x) (every #'lit x)))))
-                                (if (lit -res-) 0 1))))")))
-
-      (end-of-defun)
-      (slime-eval-async `(swank:eval-and-grab-output ,full-form)
-        (lambda (result)
-          (cl-destructuring-bind (output value) result
-            (cl-destructuring-bind (str id pres) (read value)
-              (newline)
-              (if (= pres 1)
-                  (slime-insert-presentation str id)
-                  (insert str))
-              (backward-char (+ 1 (length str)))
-              (previous-line))))))))
-
 
 (defun ensure-ceplive-loaded ()
   "Evaluate the current toplevel form.
