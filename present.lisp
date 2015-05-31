@@ -1,5 +1,5 @@
 (in-package :ceplive)
-(named-readtables:in-readtable fn_:fn_lambda)
+(named-readtables:in-readtable fn:fn-reader)
 
 (defvar strm)
 (defvar cam)
