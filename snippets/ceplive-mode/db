@@ -1,0 +1,8 @@
+# -*- mode: snippet -*-
+# name: ceplive bind
+# key: db
+# binding: direct-keybinding
+# type: snippet
+# --
+(destructuring-bind (${1:x}) (${2})
+$0)
