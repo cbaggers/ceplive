@@ -1,8 +1,0 @@
-# -*- mode: snippet -*-
-# name: Cepl deffshader
-# key: cdff
-# binding: direct-keybinding
-# type: snippet
-# --
-(deffshader ${1:vert} (${4:&uniform (i :int)})
-  $0)

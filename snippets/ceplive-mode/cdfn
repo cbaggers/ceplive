@@ -1,8 +1,0 @@
-# -*- mode: snippet -*-
-# name: Cepl defsfun
-# key: cdfn
-# binding: direct-keybinding
-# type: snippet
-# --
-(defsfun $1 ((${2:arg} ${3::float}))
-$0)

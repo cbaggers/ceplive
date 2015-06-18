@@ -1,8 +1,8 @@
 # -*- mode: snippet -*-
 # name: ceplive bind-values
-# key: bndv
+# key: vb
 # binding: direct-keybinding
 # type: snippet
 # --
-(bind-values (${1:x}) (${2})
+(multiple-value-bind (${1:x}) (${2})
 $0)

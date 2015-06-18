@@ -1,0 +1,8 @@
+# -*- mode: snippet -*-
+# name: ceplive empty vert shader
+# key: frag
+# binding: direct-keybinding
+# type: snippet
+# --
+(defun-g ${1:frag} ((tc :vec2)$2 &uniform (tex :sampler-2d))
+(texture tex tc)$0)

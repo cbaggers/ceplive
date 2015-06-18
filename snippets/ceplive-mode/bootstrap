@@ -4,8 +4,26 @@
 # binding: direct-keybinding
 # type: snippet
 # --
+(in-package :ceplive)
 
 $0
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 (defun $1 ()
   (clear)

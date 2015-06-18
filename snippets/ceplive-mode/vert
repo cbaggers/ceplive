@@ -1,0 +1,9 @@
+# -*- mode: snippet -*-
+# name: ceplive empty vert shader
+# key: vert
+# binding: direct-keybinding
+# type: snippet
+# --
+(defun-g ${1:vert} ((${2:vert} ${3:g-pt}))
+(values (v! (pos vert) 1)
+(tex quad)$0))

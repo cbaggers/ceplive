@@ -1,0 +1,7 @@
+# -*- mode: snippet -*-
+# name: Cepl def shader pipeline
+# key: dps
+# binding: direct-keybinding
+# type: snippet
+# --
+(defpipeline ${1:pass0} (g-> ${2:vert} ${3::frag})$0)

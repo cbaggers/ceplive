@@ -4,6 +4,6 @@
 # binding: direct-keybinding
 # type: snippet
 # --
-(observe (|all-events|)
+(observe (${1:e} |all-events|)
   $1)
 $0

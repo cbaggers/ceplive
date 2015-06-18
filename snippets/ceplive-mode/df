@@ -1,7 +1,8 @@
 # -*- mode: snippet -*-
-# name: ceplive def
+# name: ceplive defun
 # key: df
 # binding: direct-keybinding
 # type: snippet
 # --
-(def ${1:name} (${0:val}))
+(defun ${1:name} (${2:x})
+$0)

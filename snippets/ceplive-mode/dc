@@ -1,8 +1,8 @@
 # -*- mode: snippet -*-
-# name: Cepl defsmacro
-# key: cdfm
+# name: ceplive defclass
+# key: dc
 # binding: direct-keybinding
 # type: snippet
 # --
-(defsmacro ${1:name} ($2:x)
-  $0)
+(defclass ${1:name} (${2})
+$0)

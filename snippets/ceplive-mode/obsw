@@ -4,6 +4,6 @@
 # binding: direct-keybinding
 # type: snippet
 # --
-(observe (|window|)
+(observe (${1:e} |window|)
   $1)
 $0

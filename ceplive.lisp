@@ -1,25 +1,5 @@
 (in-package #:ceplive)
 
-(defmacro def (var val &optional doc)
-  `(defparameter ,var ,val ,doc))
-
-(defmacro fn (args &body body) `(lambda ,args ,@body))
-
-(defmacro defung (name &rest args)
-  `(defmethod ,name ,@args))
-
-(defmacro def-compiler-macro (name lambda-list &body body)
-  `(define-compiler-macro ,name ,lambda-list ,@body))
-
-(defmacro bind (lambda-list expression &body body)
-  `(destructuring-bind ,lambda-list ,expression ,@body))
-
-(defmacro bind-values (vars value-form &body body)
-  `(multiple-value-bind ,vars ,value-form ,@body))
-
-(defmacro fns (definitions &body body)
-  `(labels ,definitions ,@body))
-
 ;;--------------------------------------------------
 
 (defun process-class-slot (slot)
@@ -29,7 +9,7 @@
     (let* ((slot (append slot `(:initform ,initform)))
            (slot (if (not (member-any '(:accessor :reader :writer) slot))
                      (append slot `(:accessor ,name))
-                     slot))           
+                     slot))
            (slot (if (not (member :initarg slot))
                      (append slot `(:initarg ,(intern (symbol-name name) :keyword)))
                      slot))
@@ -40,7 +20,7 @@
                      slot)))
       slot)))
 
-(defmacro defclass (name direct-superclasses &body args)
+(defmacro defclass+ (name direct-superclasses &body args)
   (fns ((sym-only-name (x) (when (symbolp x) (symbol-name x))))
     (let* ((option-start (position "&OPTIONS" args :key #'sym-only-name
                                    :test #'equal))
@@ -90,7 +70,7 @@
                       `((test-not (x) (member x ,gitems
                                           ,@(if key `(:key ,key))
                                           ,@(if test-not `(:test ,test-not)))))
-                      `((test (x) (member x ,gitems 
+                      `((test (x) (member x ,gitems
                                           ,@(if key `(:key ,key))
                                           ,@(if test `(:test ,test)))))))
          ,(if test-not

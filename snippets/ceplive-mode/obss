@@ -4,6 +4,6 @@
 # binding: direct-keybinding
 # type: snippet
 # --
-(observe (|sys|)
+(observe (${1:e} |sys|)
   $1)
 $0

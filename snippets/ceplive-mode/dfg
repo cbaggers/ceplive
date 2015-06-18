@@ -1,8 +1,8 @@
 # -*- mode: snippet -*-
-# name: ceplive defmethod
+# name: Cepl defsfun
 # key: dfg
 # binding: direct-keybinding
 # type: snippet
 # --
-(defmethod ${1:name} ((${2:x} ${3:t}))
+(defun-g $1 ((${2:arg} ${3::float}))
 $0)

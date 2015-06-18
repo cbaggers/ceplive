@@ -5,7 +5,6 @@
   :author "Your Name <your.name@example.com>"
   :license "Specify license here"
   :serial t
-  :depends-on (#:cepl #:optima)
+  :depends-on (#:cepl-default #:optima)
   :components ((:file "package")
                (:file "ceplive")))
-

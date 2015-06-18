@@ -1,7 +1,7 @@
 # -*- mode: snippet -*-
 # name: cepl gmap
-# key: gmap
+# key: map-g
 # binding: direct-keybinding
 # type: snippet
 # --
-(gmap #'${1:draw} ${0:stream})
+(map-g #'${1:draw} ${2:stream}$0)
