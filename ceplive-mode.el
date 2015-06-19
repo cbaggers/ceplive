@@ -8,7 +8,7 @@
 (require 'yasnippet)
 
 (make-variable-buffer-local
- (defvar *cepl-snippets-dir* "~/Code/lisp/ceplive-mode/snippets/"))
+ (defvar *cepl-snippets-dir* "~/Code/lisp/ceplive/snippets/"))
 
 (defun cepl-test-func ()
   (interactive)
